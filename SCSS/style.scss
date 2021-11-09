@@ -1,0 +1,214 @@
+$redes:(
+    facebook: #3b5998,
+    instagram: #C13584,
+    youtube: red
+);
+
+* {  
+    margin: 0;  
+    padding: 0;  
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(22, 22, 22);
+    background-image: url(../img/dark_mosaic.png);
+}
+
+p{
+    color: white;;
+}
+
+table {
+    border: 3px solid rgb(149, 0, 0);
+    th {
+        background-color:#fd4e4e;
+        border: 1px solid;
+    }
+    td {
+        border: 1px solid red;
+        color: red;
+        ol.episodios{
+            list-style-type: upper-roman;
+        }
+    }
+}
+
+header{
+    display: flex;
+    padding: .5em 1em;
+    // justify-content:space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    #logo{
+        width: 8rem;
+    }
+    .menu{
+        padding-top: 2.5rem;
+        display: flex;
+        &__item{
+            display: inline;
+            margin: 1rem 1rem 1rem 1rem;
+        }
+        &__link{
+            color:rgb(12, 184, 175);
+            font-size: 1.5em;
+            text-decoration: none;
+                &:hover{
+                    color:rgb(220, 240, 239);
+                    font-size: 1.5em;
+                    text-decoration: none;
+                }
+                &--active{
+                    color:rgb(255, 255, 255)
+                }
+            }
+        }
+    }
+
+.redesNav{
+    color: red;
+    font-size: 1.5em;
+    padding-top: 2.5rem;
+    @each $red, $color in $redes {
+        &--#{$red} {
+            color: $color;
+        }
+     }
+}
+
+.info{
+
+    &__titulo{
+        color: rgb(12, 184, 175);
+        font-family: 'Bebas Neue', cursive;
+        /*line-height: 2em;*/
+        letter-spacing: .3em;
+        font-size: 2em;
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+
+    &__video{
+        width: 100%;
+        height: 520px; 
+    }
+    
+    &__parrafoPrincipal{
+        /* color: rgb(12, 184, 175); */
+        font-size: 1.2em;
+        color: rgb(255, 255, 255);
+    }
+    
+}
+
+
+.galeria{
+    display: none;
+}
+
+
+main form fieldset{
+    h2{
+    color: aliceblue;
+    line-height: 50px;
+    }
+    label{
+        color: aliceblue;
+        line-height: 50px;
+    }
+}
+
+.footer{
+    display: grid;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    grid-template-columns: 3fr 7fr;
+    background: #36D1DC;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #5B86E5, #36D1DC);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #5B86E5, #36D1DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    &__aviso{
+        justify-self: center;
+        align-self: center;
+    }
+    &__redesFooter{
+        justify-self: center;
+        display: inline;
+        font-size: 1.2em;
+        text-align: center;
+        @each $red, $color in $redes {
+            &--#{$red} {
+                color: $color;
+            }
+        }
+    }
+
+}
+
+@media only screen and (min-width: 750px)
+{
+    .galeria{
+        display: flex;
+        flex-direction:row-reverse;
+        &__img{
+            width: 12.5%;
+            width: 100%;
+            filter: brightness(0.9);
+
+            &:hover {
+                filter: brightness(1.3);
+                transform: scale(1.1);
+                transform-origin: 0% 100%;
+                z-index: 10;
+            }
+        }
+    }
+    
+
+    .info{
+        padding-top: 2rem;
+        background: rgb(255,255,255);
+        background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(217,217,217,1) 52%, rgba(255,255,255,1) 100%);
+        &__infoPrincipal{
+            margin: 1rem 3rem 3rem 5rem;
+        }
+        &__titulo{
+                color: rgb(12, 184, 175);
+                font-family: 'Bebas Neue', cursive;
+                /*line-height: 2em;*/
+                letter-spacing: .3em;
+                font-size: 2em;
+                text-align: left;
+                padding-bottom: 1rem;
+            }
+        &__parrafoPrincipal{
+                /* color: rgb(12, 184, 175); */
+                font-size: 1.2em;
+                color: black;
+            }
+        }
+    }
+
+@media screen and (min-width:1240px)
+{
+    .info{
+        padding-top: 2rem;
+        display: flex;
+        justify-content:space-between;
+        background: rgb(255,255,255);
+        background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(217,217,217,1) 52%, rgba(255,255,255,1) 100%);
+        &__video{
+            margin-right: 5rem;
+            width: 700px;
+        }
+        &__infoPrincipal{
+            margin: 5rem 3rem 0rem 5rem;
+        }
+    }
+
+    header{
+        flex-wrap: nowrap;
+        justify-content:space-evenly;
+    }
+}

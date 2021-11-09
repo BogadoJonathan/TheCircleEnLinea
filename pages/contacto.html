@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords"
+    content="juegos, reality, the circle, juego virtual, reality en linea, gran hermano, concurso">
+<meta name="description"
+    content="un juego virtual basado en el reality del mismo nombre de netflix, donde 8 personas de diferentes partes del mundo participaran sin moverse de sus casas">
+    <script src="https://kit.fontawesome.com/710867d0dd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <title>Contacto</title>
+</head>
+
+<body>
+    <header class="container-fluid">
+        <div>
+            <img id="logo" src="../img/logo.png" alt="logo">
+        </div>
+        <nav class="menu">
+            <ul>
+                <li class="menu__item"><a class="menu__link " href="../index.html">Inicio</a></li>
+                <li class="menu__item"><a class="menu__link" href="sobreNosotros.html">Sobre Nosotros</a></li>
+                <li class="menu__item"><a class="menu__link" href="participantes.html">Participantes</a></li>
+                <li class="menu__item"><a class="menu__link " href="capitulos.html">Capitulos</a></li>
+                <li class="menu__item"><a class="menu__link menu__link--active" href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="redesNav">
+            <i class="fab redesNav--facebook fa-facebook-square"></i>
+            <i class="fab redesNav--instagram fa-instagram"></i>
+            <i class="fab redesNav--youtube fa-youtube"></i>
+        </div>
+    </header>
+    <main>
+        <h1 class="titulo">Contacto</h1>
+        <form action="" method="get">
+            <fieldset>
+                <legend>Bandeja de contacto</legend>
+                <h2>Datos personales</h2>
+                <label for="name">Nombre</label>
+                <input type="text" name="nombre" id="name">
+
+                <label for="lastName">Apellido</label>
+                <input type="text" name="apellido" id="lastName">
+
+                <h2>Razon de su contacto</h2>
+                <input type="checkbox" id="check1" value="check1">
+                <label for="check1">Reclamo</label>
+
+                <input type="checkbox" id="check2" value="check2">
+                <label for="check2">Consejo</label>
+
+                <input type="checkbox" id="check3" value="check3">
+                <label for="check3">Apoyo</label>
+
+                <h2>Sexo</h2>
+                <select name="sexo">
+                    <option selected value="0"> Elige una opción </option>
+                    <option value="1">Masculino</option>
+                    <option value="2">Femenino</option>
+                    <option value="3">No Binario</option>
+                    <option value="4">Otro</option>
+                </select>
+                <h2>Mensaje</h2>
+                <div>
+                    <textarea name="comentarios">Escribe aquí tus comentarios</textarea>
+                </div><br>
+                <div>
+                    <input type="reset" value="Borrar datos">
+                </div><br>
+                <div>
+                    <input type="submit" value="Enviar datos">
+                </div>
+            </fieldset>
+
+        </form>
+    </main>
+
+    <footer>
+        <div class="redesSocialesFooter">
+            <p>redes sociales: </p>
+            <i class="fab fa-facebook-square"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-youtube"></i>
+        </div>
+        <div class="aviso">
+            <p>juego virtual sin fines de lucro, el único fin es entretener.</p>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

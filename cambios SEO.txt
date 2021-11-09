@@ -1,0 +1,15 @@
+En el archivo index.html sumé el SEO con las siguientes características:
+
+-   Descripción: mediante la etiqueta meta name description, agregué el siguiente párrafo que explica en 
+pocas palabras el contenido de mi sitio: “un juego virtual basado en el reality del mismo nombre de netflix,
+donde 8 personas de diferentes partes del mundo participaran sin moverse de sus casas"
+-   Palabras clave: mediante la etiqueta meta name keywords, agregué las palabras clave que acompañarán a todas
+las páginas de mi sitio: "juegos, reality, the circle, juego virtual, reality en linea, gran hermano, concurso"
+-   Encabezado: para el encabezado del h1 utilicé el texto “The Circle En Linea”
+-   Se agrego la pagina de error 404
+-   Se bajo la calidad de las imagenes
+-   Se agregaron H1 en todas las paginas
+-   Se agregaron enlaces a las redes sociales
+-   se modifico el parrafo principal en pequeñas partes para que sea leido de mejor forma.
+-   diseño web adaptado a moviles
+-   se agrego enlaces a las redes sociales
