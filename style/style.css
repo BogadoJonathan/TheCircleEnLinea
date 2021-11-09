@@ -70,10 +70,18 @@ header {
   width: 100%;
   height: 520px; }
 
-.info__parrafoPrincipal {
-  /* color: rgb(12, 184, 175); */
-  font-size: 1.2em;
-  color: white; }
+.info__item {
+  color: white;
+  list-style: none;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  margin-left: 2rem;
+  font-weight: bold; }
+  .info__item i {
+    color: #0cb8af;
+    margin-right: 1rem; }
 
 .galeria {
   display: none; }
@@ -90,13 +98,7 @@ main form fieldset label {
   display: grid;
   padding-top: 3rem;
   padding-bottom: 3rem;
-  grid-template-columns: 3fr 7fr;
-  background: #36D1DC;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #5B86E5, #36D1DC);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #5B86E5, #36D1DC);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
+  grid-template-columns: 3fr 7fr; }
   .footer__aviso {
     justify-self: center;
     align-self: center; }
@@ -138,11 +140,20 @@ main form fieldset label {
       letter-spacing: .3em;
       font-size: 2em;
       text-align: left;
-      padding-bottom: 1rem; }
-    .info__parrafoPrincipal {
-      /* color: rgb(12, 184, 175); */
-      font-size: 1.2em;
-      color: black; } }
+      padding-bottom: 1rem;
+      margin-bottom: 1.2rem; }
+    .info__item {
+      color: black;
+      list-style: none;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1em;
+      font-weight: bold;
+      margin-left: 0rem; }
+      .info__item i {
+        color: #0cb8af;
+        margin-right: 1rem; } }
 
 @media screen and (min-width: 1240px) {
   .info {

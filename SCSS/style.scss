@@ -4,6 +4,8 @@ $redes:(
     youtube: red
 );
 
+$colorPrincipal: rgb(12, 184, 175);
+
 * {  
     margin: 0;  
     padding: 0;  
@@ -95,10 +97,20 @@ header{
         height: 520px; 
     }
     
-    &__parrafoPrincipal{
-        /* color: rgb(12, 184, 175); */
-        font-size: 1.2em;
-        color: rgb(255, 255, 255);
+    &__item{
+        color: white;
+        list-style: none;
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1em;
+        margin-left: 2rem;
+        font-weight: bold;
+        i{
+            color: $colorPrincipal;
+            margin-right: 1rem;
+        }
+        
     }
     
 }
@@ -125,9 +137,6 @@ main form fieldset{
     padding-top: 3rem;
     padding-bottom: 3rem;
     grid-template-columns: 3fr 7fr;
-    background: #36D1DC;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #5B86E5, #36D1DC);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #5B86E5, #36D1DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     &__aviso{
         justify-self: center;
         align-self: center;
@@ -174,19 +183,31 @@ main form fieldset{
             margin: 1rem 3rem 3rem 5rem;
         }
         &__titulo{
-                color: rgb(12, 184, 175);
+                color: $colorPrincipal;
                 font-family: 'Bebas Neue', cursive;
                 /*line-height: 2em;*/
                 letter-spacing: .3em;
                 font-size: 2em;
                 text-align: left;
                 padding-bottom: 1rem;
+                margin-bottom: 1.2rem;
             }
-        &__parrafoPrincipal{
-                /* color: rgb(12, 184, 175); */
-                font-size: 1.2em;
-                color: black;
+
+        &__item{
+            color: black;
+            list-style: none;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1em;
+            font-weight: bold;
+            margin-left: 0rem;
+            i{
+                color: $colorPrincipal;
+                margin-right: 1rem;
             }
+            
+        }
         }
     }
 
