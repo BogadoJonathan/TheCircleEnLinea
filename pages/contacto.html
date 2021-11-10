@@ -32,9 +32,9 @@
             </ul>
         </nav>
         <div class="redesNav">
-            <i class="fab redesNav--facebook fa-facebook-square"></i>
-            <i class="fab redesNav--instagram fa-instagram"></i>
-            <i class="fab redesNav--youtube fa-youtube"></i>
+            <a href="http://www.facebook.com/hazvir"><i class="fab redesNav--facebook fa-facebook-square"></i></a>
+            <a href="http://www.instagram.com/hazvir"><i class="fab redesNav--instagram fa-instagram"></i></a>
+            <a href="http://www.youtube.com/hazvir"><i class="fab redesNav--youtube fa-youtube"></i></a>
         </div>
     </header>
     <main>
@@ -42,14 +42,14 @@
         <form action="" method="get">
             <fieldset>
                 <legend>Bandeja de contacto</legend>
-                <h2>Datos personales</h2>
+                <h2 class="form__h2">Datos personales</h2>
                 <label for="name">Nombre</label>
                 <input type="text" name="nombre" id="name">
-
+                <br>
                 <label for="lastName">Apellido</label>
                 <input type="text" name="apellido" id="lastName">
 
-                <h2>Razon de su contacto</h2>
+                <h2 class="form__h2">Razon de su contacto</h2>
                 <input type="checkbox" id="check1" value="check1">
                 <label for="check1">Reclamo</label>
 
@@ -59,7 +59,7 @@
                 <input type="checkbox" id="check3" value="check3">
                 <label for="check3">Apoyo</label>
 
-                <h2>Sexo</h2>
+                <h2 class="form__h2">Sexo</h2>
                 <select name="sexo">
                     <option selected value="0"> Elige una opción </option>
                     <option value="1">Masculino</option>
@@ -67,7 +67,7 @@
                     <option value="3">No Binario</option>
                     <option value="4">Otro</option>
                 </select>
-                <h2>Mensaje</h2>
+                <h2 class="form__h2">Mensaje</h2>
                 <div>
                     <textarea name="comentarios">Escribe aquí tus comentarios</textarea>
                 </div><br>
@@ -82,14 +82,16 @@
         </form>
     </main>
 
-    <footer>
-        <div class="redesSocialesFooter">
+    <footer class="footer">
+        <div class="footer__redesFooter">
             <p>redes sociales: </p>
-            <i class="fab fa-facebook-square"></i>
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-youtube"></i>
+            <a href="http://www.facebook.com/hazvir"><i
+                    class="fab footer__redesFooter--facebook fa-facebook-square"></i></a>
+            <a href="http://www.instagram.com/hazvir"><i
+                    class="fab footer__redesFooter--instagram fa-instagram"></i></a>
+            <a href="http://www.youtube.com/hazvir"><i class="fab footer__redesFooter--youtube fa-youtube"></i></a>
         </div>
-        <div class="aviso">
+        <div class="footer__aviso">
             <p>juego virtual sin fines de lucro, el único fin es entretener.</p>
         </div>
 

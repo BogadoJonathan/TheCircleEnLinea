@@ -10,16 +10,12 @@ body {
 p {
   color: white; }
 
-table {
-  border: 3px solid #950000; }
-  table th {
-    background-color: #fd4e4e;
-    border: 1px solid; }
-  table td {
-    border: 1px solid red;
-    color: red; }
-    table td ol.episodios {
-      list-style-type: upper-roman; }
+.titulo {
+  color: #0cb8af;
+  font-size: 3em;
+  font-family: 'Bebas Neue', cursive;
+  text-align: center;
+  margin-bottom: 1em; }
 
 header {
   display: flex;
@@ -134,33 +130,36 @@ main form fieldset label {
     width: 50%;
     height: 765px; }
 
-.sobreNosotros {
+.sobreNosotros__columna1 {
   display: flex;
-  flex-direction: row;
-  height: 100vh; }
-  .sobreNosotros__columna1 {
-    text-align: center;
-    width: 55%; }
-    .sobreNosotros__columna1 h1 {
-      font-size: 5em;
-      color: #0cb8af; }
-    .sobreNosotros__columna1__text {
-      padding: 0em 3em 0em 3em;
-      font-size: 1em; }
-  .sobreNosotros__columna2 {
-    width: 45%; }
-    .sobreNosotros__columna2 img {
-      width: auto;
-      height: 80vh; }
-  .sobreNosotros__text {
-    padding-left: 3rem;
-    padding-right: 3rem;
-    font-size: 1.3em; }
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; }
+  .sobreNosotros__columna1 h1 {
+    font-size: 2em;
+    margin: 1em 0em 1em 0em;
+    color: yellow; }
+  .sobreNosotros__columna1__text {
+    padding: 0em 3em 0em 3em;
+    font-size: 1em; }
+
+.sobreNosotros__columna2 {
+  margin-top: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .sobreNosotros__columna2 img {
+    width: 80%;
+    height: auto; }
+
+.sobreNosotros__text {
+  padding-left: 3rem;
+  padding-right: 3rem;
+  font-size: 1.3em; }
 
 .participantes__fila {
   display: flex;
-  flex-direction: row;
-  height: 100vh; }
+  flex-direction: row; }
 
 .participantes__fila--claro {
   background: rgba(255, 255, 255, 0.2);
@@ -169,24 +168,26 @@ main form fieldset label {
 .participantes__descripcion {
   flex: 50%;
   display: flex;
-  align-items: center;
+  margin-left: 10px;
   justify-content: center;
+  flex-direction: column;
+  text-align: left;
   animation-name: textAnimation;
   animation-duration: 2s; }
   .participantes__descripcion h2 {
     color: #0cb8af;
     font-family: 'Bebas Neue', cursive;
-    /*line-height: 2em;*/
     letter-spacing: .3em;
-    font-size: 3em;
     padding-bottom: 1rem;
     margin-bottom: 1.2rem; }
 
 .participantes__imagen {
-  flex: 50%; }
+  flex: 50%;
+  display: flex;
+  align-items: flex-end; }
   .participantes__imagen img {
-    width: auto;
-    height: 100vh;
+    width: 100%;
+    height: auto;
     animation-name: imgAnimation;
     animation-duration: 2s; }
 
@@ -197,11 +198,66 @@ main form fieldset label {
   margin-bottom: 2rem;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1em;
-  margin-left: 2rem;
   font-weight: bold; }
   .participantes__item i {
-    color: #0cb8af;
-    margin-right: 1rem; }
+    color: #0cb8af; }
+
+.capitulo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5em; }
+  .capitulo__descripcion {
+    flex: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    animation-name: textAnimation;
+    animation-duration: 2s; }
+    .capitulo__descripcion h2 {
+      color: #0cb8af;
+      font-family: 'Bebas Neue', cursive;
+      letter-spacing: .3em;
+      font-size: 3em;
+      padding-bottom: 1rem;
+      margin-bottom: 1.2rem; }
+    .capitulo__descripcion span {
+      color: #0cb8af; }
+  .capitulo__video {
+    flex: 50%; }
+    .capitulo__video img {
+      width: 100%;
+      height: auto;
+      animation-name: imgAnimation;
+      animation-duration: 2s; }
+
+form {
+  padding: 0em 10vw 0em 10vw;
+  text-align: center; }
+  form .form__h2 {
+    color: #0cb8af; }
+
+input[type=text], select {
+  width: 70%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #05ec94;
+  border-radius: 4px;
+  box-sizing: border-box; }
+
+input[type=submit] {
+  width: 100%;
+  background-color: #61ecb7;
+  color: black;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer; }
+
+input[type=submit]:hover {
+  background-color: #05ec94; }
 
 @keyframes galleryAnimation {
   0% {
@@ -231,6 +287,21 @@ main form fieldset label {
     transform: translateX(0); } }
 
 @media only screen and (min-width: 750px) {
+  .participantes__fila {
+    height: 100vh; }
+  .participantes__descripcion {
+    align-items: center;
+    justify-content: center;
+    flex-direction: row; }
+    .participantes__descripcion h2 {
+      font-size: 3em; }
+  .participantes__imagen img {
+    width: auto;
+    height: 100vh; }
+  .participantes__item {
+    margin-left: 2rem; }
+    .participantes__item i {
+      margin-right: 1rem; }
   .galeria {
     animation-name: galleryAnimation;
     animation-duration: 2s;
@@ -250,8 +321,12 @@ main form fieldset label {
         z-index: 10; }
   .info {
     padding-top: 2rem;
-    background: white;
-    background: linear-gradient(180deg, white 0%, #d9d9d9 52%, white 100%); }
+    background: #2BC0E4;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #EAECC6, #effff9);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #EAECC6, #effff9);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
     .info__infoPrincipal {
       margin: 1rem 3rem 3rem 5rem; }
     .info__titulo {
@@ -277,12 +352,27 @@ main form fieldset label {
         margin-right: 1rem; } }
 
 @media screen and (min-width: 1240px) {
+  .capitulo {
+    flex-direction: row; }
+    .capitulo__video img {
+      width: auto;
+      height: 90vh; }
+  .sobreNosotros {
+    display: flex;
+    flex-direction: row;
+    height: 100vh; }
+    .sobreNosotros__columna1 {
+      width: 55%; }
+      .sobreNosotros__columna1 h1 {
+        font-size: 5em; }
+    .sobreNosotros__columna2 {
+      width: 45%; }
+      .sobreNosotros__columna2 img {
+        width: auto;
+        height: 100vh; }
   .info {
     padding-top: 2rem;
-    display: flex;
-    justify-content: space-between;
-    background: white;
-    background: linear-gradient(180deg, white 0%, #d9d9d9 52%, white 100%); }
+    display: flex; }
     .info__video {
       margin-right: 5rem;
       width: 700px; }
