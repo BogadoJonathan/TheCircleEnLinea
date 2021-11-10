@@ -114,10 +114,131 @@ main form fieldset label {
     .footer__redesFooter--youtube {
       color: red; }
 
+.snapwidget {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white; }
+  .snapwidget__title {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 2em;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif; }
+    .snapwidget__title span {
+      color: #0cb8af; }
+  .snapwidget__widget {
+    border: none;
+    overflow: hidden;
+    width: 50%;
+    height: 765px; }
+
+.sobreNosotros {
+  display: flex;
+  flex-direction: row;
+  height: 100vh; }
+  .sobreNosotros__columna1 {
+    text-align: center;
+    width: 55%; }
+    .sobreNosotros__columna1 h1 {
+      font-size: 5em;
+      color: #0cb8af; }
+    .sobreNosotros__columna1__text {
+      padding: 0em 3em 0em 3em;
+      font-size: 1em; }
+  .sobreNosotros__columna2 {
+    width: 45%; }
+    .sobreNosotros__columna2 img {
+      width: auto;
+      height: 80vh; }
+  .sobreNosotros__text {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    font-size: 1.3em; }
+
+.participantes__fila {
+  display: flex;
+  flex-direction: row;
+  height: 100vh; }
+
+.participantes__fila--claro {
+  background: rgba(255, 255, 255, 0.2);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(217, 217, 217, 0.2) 52%, rgba(255, 255, 255, 0.2) 100%); }
+
+.participantes__descripcion {
+  flex: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation-name: textAnimation;
+  animation-duration: 2s; }
+  .participantes__descripcion h2 {
+    color: #0cb8af;
+    font-family: 'Bebas Neue', cursive;
+    /*line-height: 2em;*/
+    letter-spacing: .3em;
+    font-size: 3em;
+    padding-bottom: 1rem;
+    margin-bottom: 1.2rem; }
+
+.participantes__imagen {
+  flex: 50%; }
+  .participantes__imagen img {
+    width: auto;
+    height: 100vh;
+    animation-name: imgAnimation;
+    animation-duration: 2s; }
+
+.participantes__item {
+  color: white;
+  list-style: none;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  margin-left: 2rem;
+  font-weight: bold; }
+  .participantes__item i {
+    color: #0cb8af;
+    margin-right: 1rem; }
+
+@keyframes galleryAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(50px); }
+  20%, 50% {
+    opacity: 0.5;
+    transform: translateY(10px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
+@keyframes imgAnimation {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes textAnimation {
+  0% {
+    opacity: 0;
+    transform: translateX(100px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
 @media only screen and (min-width: 750px) {
   .galeria {
+    animation-name: galleryAnimation;
+    animation-duration: 2s;
     display: flex;
     flex-direction: row-reverse; }
+    .galeria a {
+      display: flex;
+      align-items: flex-end; }
     .galeria__img {
       width: 12.5%;
       width: 100%;
